@@ -1,0 +1,17 @@
+name: BoardGames
+version: '${project.version}'
+main: me.wilhelm.boardgames.Boardgames
+api-version: 1.18
+authors: [ Wilhelm-the-3rd ]
+
+depend:
+  - WorldEdit
+
+commands:
+  Room:
+    usage: /Room [Reload]
+    description: Used for room configuration
+
+  Game:
+    usage: /Game [Start | Invite | Accept | Set] [Player | Game]
+    description: Used for games
