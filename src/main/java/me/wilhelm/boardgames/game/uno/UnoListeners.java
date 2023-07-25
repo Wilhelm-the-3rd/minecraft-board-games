@@ -113,6 +113,7 @@ public class UnoListeners implements Listener {
 
         if (!checks(player))
             return;
+
         // Check that current item is not null
         if (clickedItem == null)
             return;
@@ -123,6 +124,7 @@ public class UnoListeners implements Listener {
         // Check that card is usable
         if (!card.isUsable())
             return;
+
         // If card is plus four check if material is brown mushroom
         if (card.getFace() == UnoCard.CardFace.PLUS_FOUR && material != Material.BROWN_MUSHROOM)
             return;

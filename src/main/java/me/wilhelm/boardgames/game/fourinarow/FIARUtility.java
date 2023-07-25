@@ -155,19 +155,14 @@ public class FIARUtility {
 
     // Check win for a specific combination
     public static boolean checkWin(Integer a, Integer b, Integer c, FourInARow.TeamColor team) {
-        if (!(a <= 0) && !(a >= 42)) {
-            if (!(b <= 0) && !(b >= 42)) {
-                if (!(c <= 0) && !(c >= 42)) {
-                    return Objects.equals(FourInARow.currentGame.getSpace(a), team) && Objects.equals(FourInARow.currentGame.getSpace(b), team) && Objects.equals(FourInARow.currentGame.getSpace(c), team);
-                } else {
-                    return false;
-                }
-            } else {
-                return false;
-            }
-        } else {
+        if (!(!(a <= 0) && !(a >= 42)))
             return false;
-        }
+        if (!(!(b <= 0) && !(b >= 42)))
+            return false;
+        if (!(!(c <= 0) && !(c >= 42)))
+            return false;
+
+        return Objects.equals(FourInARow.currentGame.getSpace(a), team) && Objects.equals(FourInARow.currentGame.getSpace(b), team) && Objects.equals(FourInARow.currentGame.getSpace(c), team);
     }
 
     // Check every possible win combination
